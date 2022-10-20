@@ -1,13 +1,13 @@
 <h1>Deep Learning Big Project</h1>
 
-Team name: Golden Oreos
+<br>Team name</br>: Golden Oreos
 
-Team members:
+<br>Team members</br>:
 - Köller Donát Ákos (D813GB)
 - Vastag Emese (OTNB7G)
 - Vlaszov Artúr (XKMPWF)
 
-Project:
+<br>Project</br>:
 Our main objective is to reconstruct the spectral features of speech from intracranial EEG data.<br>
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
