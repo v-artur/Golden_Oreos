@@ -8,7 +8,7 @@
 - Vlaszov Artúr (XKMPWF)
 
 <b>Project</b>:
-Our main objective is to reconstruct the spectral features of speech from intracranial EEG data.<br>
+Our main objective is to reconstruct the spectral features of speech from intracranial EEG data. (BRAIN2SPEECH)<br>
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
 et al. (for which the <a href="https://osf.io/nrgx6/" rel='nofollow'>dataset</a> 
