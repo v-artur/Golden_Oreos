@@ -23,10 +23,11 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - pandas (1.3.5)
 - pywnb (2.2.0)
 
-The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. used with minor changes.
+The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
+<a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor changes.
 The function of each script:
 - <br>MelFilterBank.py</br>: This is used to apply mel filter banks to the spectograms.
-- <br>extract_features.py</br>: Reads in the iBIDS dataset and creates the features used for modeling
-- <br>reconstructWave.py</br>: Used for audio waveform synthesis
+- <br>extract_features.py</br>: Reads in the iBIDS dataset and creates the features used for modeling.
+- <br>reconstructWave.py</br>: Used for audio waveform synthesis.
 
-The 
+The notebook "Modeling" is 
