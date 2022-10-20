@@ -15,7 +15,7 @@ et al. (for which the <a href="https://osf.io/nrgx6/" rel='nofollow'>dataset</a>
 and the <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>article about the research</a> 
 can be found here),
 and we are trying to improve on it. We are aiming to replace the linear regression model described in the research with
-autoencoders and transformer models.
+autoencoders and transformer models, while we are also trying to make a speaker-independent system.
 
 The notebooks and scripts require Python >= 3.6 and the following packages:
 - numpy (1.21.6)
