@@ -28,6 +28,6 @@ The scripts used for data preparation and preprocessing are the same that Maxime
 The function of each script:
 - <b>MelFilterBank.py</b>: This is used to apply mel filter banks to the spectograms.
 - <b>extract_features.py</b>: Reads in the iBIDS dataset and creates the features used for modeling.
-- <b>reconstructWave.py</b>: Used for audio waveform synthesis.
+- <b>reconstructWave.py</b>: Used for audio waveform synthesis. (Applies Fourier-transformations)
 
-The notebook "Modeling" will be used for the audio reconstruction. 
+The notebook "Modeling.ipynb" will be used for the audio reconstruction. 
