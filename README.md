@@ -17,8 +17,16 @@ and we are trying to improve on it. We are aiming to replace the linear regressi
 autoencoders and transformer models.
 
 The notebooks and scripts require Python >= 3.6 and the following packages:
-- numpy
-- scipy
-- scikit-learn
-- pandas
-- pywnb
+- numpy (1.21.6)
+- scipy (1.7.3)
+- scikit-learn (1.0.2)
+- pandas (1.3.5)
+- pywnb (2.2.0)
+
+The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. used with minor changes.
+The function of each script:
+- <br>MelFilterBank.py</br>: This is used to apply mel filter banks to the spectograms.
+- <br>extract_features.py</br>: Reads in the iBIDS dataset and creates the features used for modeling
+- <br>reconstructWave.py</br>: Used for audio waveform synthesis
+
+The 
