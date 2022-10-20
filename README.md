@@ -25,10 +25,14 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - pywnb (2.2.0)
 
 The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
-<a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor changes.
+<a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor changes. 
 The function of each script:
 - <b>MelFilterBank.py</b>: This is used to apply mel filter banks to the spectograms.
 - <b>extract_features.py</b>: Reads in the iBIDS dataset and creates the features used for modeling.
 - <b>reconstructWave.py</b>: Used for audio waveform synthesis. (Applies Fourier-transformations)
+They first script serves as a module used by the other scripts, while the latter two of the scripts can be run from 
+commandline. The only requirement is that the directory which contains the scripts must also contain the main directory 
+(named "SingleWordProductionDutch-iBIDS") of the dataset.
+
 
 The notebook "Modeling.ipynb" will be used for the audio reconstruction. 
