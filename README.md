@@ -11,8 +11,9 @@
 Our main objective is to reconstruct the spectral features of speech from intracranial EEG data. (BRAIN2SPEECH)<br>
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
-et al. (for which the <a href="https://osf.io/nrgx6/" rel='nofollow'>dataset</a> 
-and the <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>article</a> can be found here),
+et al. (for which the <a href="https://osf.io/nrgx6/" rel='nofollow'>dataset</a> that we use
+and the <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>article about the research</a> 
+can be found here),
 and we are trying to improve on it. We are aiming to replace the linear regression model described in the research with
 autoencoders and transformer models.
 
