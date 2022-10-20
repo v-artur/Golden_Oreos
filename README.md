@@ -1,8 +1,8 @@
 <h1>Deep Learning Big Project</h1>
 
-<br>Team name</br>: Golden Oreos
+<b>Team name</b>: Golden Oreos
 
-<br>Team members</br>:
+<b>Team members</b>:
 - Köller Donát Ákos (D813GB)
 - Vastag Emese (OTNB7G)
 - Vlaszov Artúr (XKMPWF)
