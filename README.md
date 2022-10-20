@@ -30,4 +30,4 @@ The function of each script:
 - <b>extract_features.py</b>: Reads in the iBIDS dataset and creates the features used for modeling.
 - <b>reconstructWave.py</b>: Used for audio waveform synthesis.
 
-The notebook "Modeling" will be used for the audio reconstruction.
+The notebook "Modeling" will be used for the audio reconstruction. 
