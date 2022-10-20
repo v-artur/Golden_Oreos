@@ -7,7 +7,7 @@
 - Vastag Emese (OTNB7G)
 - Vlaszov Artúr (XKMPWF)
 
-<br>Project</br>:
+<b>Project</b>:
 Our main objective is to reconstruct the spectral features of speech from intracranial EEG data.<br>
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
@@ -26,8 +26,8 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
 <a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor changes.
 The function of each script:
-- <br>MelFilterBank.py</br>: This is used to apply mel filter banks to the spectograms.
-- <br>extract_features.py</br>: Reads in the iBIDS dataset and creates the features used for modeling.
-- <br>reconstructWave.py</br>: Used for audio waveform synthesis.
+- <b>MelFilterBank.py</b>: This is used to apply mel filter banks to the spectograms.
+- <b>extract_features.py</b>: Reads in the iBIDS dataset and creates the features used for modeling.
+- <b>reconstructWave.py</b>: Used for audio waveform synthesis.
 
 The notebook "Modeling" is 
