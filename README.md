@@ -39,6 +39,8 @@ command line. The only requirement is that the directory which contains the scri
 The notebook "Modeling.ipynb" will be used for the audio reconstruction, and is mainly based on the "reconstruction_minimal.py" script 
 that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be imported from Google Drive.
 
+The "Important urls" directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
+
 <h2> Data Preparation and modeling </h2>
 
 We obtained the desired feature and label vectors by running the "extract_features.py" script. 
