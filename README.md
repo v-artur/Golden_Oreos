@@ -36,7 +36,8 @@ command line. The only requirement is that the directory which contains the scri
 (named "SingleWordProductionDutch-iBIDS") of the dataset.
 
 
-The notebook "Modeling.ipynb" will be used for the audio reconstruction.
+The notebook "Modeling.ipynb" will be used for the audio reconstruction, and is mainly based on the "reconstruction_minimal.py" script 
+that Maxime Verwoert et al. used.
 
 <h2> Data Preparation and modeling </h2>
 
