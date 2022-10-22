@@ -51,11 +51,11 @@ Thus, for each 10 subjects, we got the following attributes stored as numpy arra
 From this, we are focusing mainly on the first two, that is, we want to reconstruct the spectogram from the EEG feature vectors.
 For the one-speaker model, the method of reconstruction is the following for each subject:
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
-other options as well)
+other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
 and another part as validation set, then we train the neural networks on the other <i>k-2</i> parts, and finally, we reconstruct that part of the spectrogram which corresponds 
 to the test set.
-- After <i>k</i> iteration, we completely reconstructed the spectrogram, and we compare it to the original
+- After <i>k</i> iteration, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-free model, we chose 6 individuals to serve as test set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based sex and age:
