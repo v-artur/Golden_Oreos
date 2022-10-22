@@ -37,7 +37,7 @@ command line. The only requirement is that the directory which contains the scri
 
 
 The notebook "Modeling.ipynb" will be used for the audio reconstruction, and is mainly based on the "reconstruction_minimal.py" script 
-that Maxime Verwoert et al. used. 
+that Maxime Verwoert et al. used. The required data and scripts will be imported from Google Drive.
 
 <h2> Data Preparation and modeling </h2>
 
@@ -57,7 +57,7 @@ and another part as validation set, then we train the neural networks on the oth
 and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
 - After <i>k</i> iteration, we completely reconstructed the spectrogram, so we compare it to the original.
 
-For the speaker-free model, we chose 6 individuals to serve as test set, 2 other as validation set and the remaining 2 as test set. 
+For the speaker-free model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based sex and age:
 - Train set subject: 5, 6, 7, 8, 9, 10 (3 male, 3 female, mean age: 31.83)
 - Validation set subjects: 1, 2 (20 years old female, 43 years old male)
