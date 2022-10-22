@@ -43,7 +43,7 @@ that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "r
 
 The <b>"Important urls"</b> directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
 
-<h2> Data Preparation and modeling </h2>
+<h2> Data Preparation and Modeling </h2>
 
 We obtained the desired feature and label vectors by running the "extract_features.py" script (The files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
