@@ -59,7 +59,7 @@ to the test set.
 For the speaker-free model, we chose 6 individuals to serve as test set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based sex and age:
 - Train set subject: 5, 6, 7, 8, 9, 10 (3 male, 3 female, mean age: 31.83)
-- Validation set subjects: 1, 2 (20 years old female and 43 years old male)
+- Validation set subjects: 1, 2 (20 years old female, 43 years old male)
 - Test set subjects: 3, 4  (24 years old male, 46 years old female)
 
 The modeling for the speaker-indepenent system is straight-forward: we train the neural networks on the test set, validate them on the 
