@@ -61,7 +61,7 @@ and another part as a validation set, then we train the neural networks on the o
 and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
-For the speaker-free model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
+For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based on sex and age:
 - Train set subject: 5, 6, 7, 8, 9, 10 (3 male, 3 female, mean age: 31.83)
 - Validation set subjects: 1, 2 (20 years old female, 43 years old male)
