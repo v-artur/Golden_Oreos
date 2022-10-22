@@ -23,6 +23,8 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - scikit-learn (1.0.2)
 - pandas (1.3.5)
 - pywnb (2.2.0)
+- tensorflow (2.9.2)
+- (List will be updated as the project progresses)
 
 The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
 <a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor to no changes. 
@@ -37,7 +39,7 @@ command line. The only requirement is that the directory which contains the scri
 
 
 The notebook "Modeling.ipynb" will be used for the audio reconstruction, and is mainly based on the "reconstruction_minimal.py" script 
-that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be imported from Google Drive.
+that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be imported from Google Drive. 
 
 The "Important urls" directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
 
