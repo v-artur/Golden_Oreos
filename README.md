@@ -45,7 +45,7 @@ The "Important urls" directory contains one Word documentum named "URLS.docx", w
 
 <h2> Data Preparation and modeling </h2>
 
-We obtained the desired feature and label vectors by running the "extract_features.py" script (The files be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
+We obtained the desired feature and label vectors by running the "extract_features.py" script (The files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
 - The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
