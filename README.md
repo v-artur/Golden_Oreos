@@ -55,7 +55,7 @@ other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as a test set (a different, never previously used part in each iteration),
 and another part as a validation set, then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
 and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
-- After <i>k</i> iteration, we completely reconstructed the spectrogram, so we compare it to the original.
+- After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-free model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based on sex and age:
