@@ -31,7 +31,7 @@ The function of each script:
 - <b>extract_features.py</b>: Reads in the iBIDS dataset and creates the features used for modeling.
 - <b>reconstructWave.py</b>: Used for audio waveform synthesis. (Applies Fourier-transformations)
 
-They first script serves as a module used by the other scripts, while the latter two of the scripts can be run from 
+The first script serves as a module used by the other scripts, while the latter two of the scripts can be run from 
 command line. The only requirement is that the directory which contains the scripts must also contain the main directory 
 (named "SingleWordProductionDutch-iBIDS") of the dataset.
 
@@ -43,27 +43,27 @@ that Maxime Verwoert et al. used. The required data and scripts will be imported
 
 We obtained the desired feature and label vectors by running the "extract_features.py" script. 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
-- The spectogram of the original audio (this is what we aim to reconstruct)
+- The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
 - The featurename vector
-- The words corresponding to the spectogram in each timestamp
+- The words corresponding to the spectrogram in each timestamp
 
-From this, we are focusing mainly on the first two, that is, we want to reconstruct the spectogram from the EEG feature vectors.
+From this, we are focusing mainly on the first two, that is, we want to reconstruct the spectrogram from the EEG feature vectors.
 For the one-speaker model, the main method of reconstruction is the following for each subject:
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
-- We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
-and another part as validation set, then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
+- We do <i>k</i> iterations. In each iteration, we label one of the parts as a test set (a different, never previously used part in each iteration),
+and another part as a validation set, then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
 and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
 - After <i>k</i> iteration, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-free model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
-The distribution of the subject into sets were based sex and age:
+The distribution of the subject into sets were based on sex and age:
 - Train set subject: 5, 6, 7, 8, 9, 10 (3 male, 3 female, mean age: 31.83)
 - Validation set subjects: 1, 2 (20 years old female, 43 years old male)
 - Test set subjects: 3, 4  (24 years old male, 46 years old female)
 
-The modeling for the speaker-indepenent system is straight-forward: we train the neural networks on the test set, validate them on the 
+The modeling for the speaker-indepenent system is straight-forward: we train the neural networks on the train set, validate them on the 
 validation set, and test them on the test set.
 
   
