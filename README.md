@@ -67,7 +67,7 @@ The distribution of the subject into sets were based on sex and age:
 - Validation set subjects: 1, 2 (20 years old female, 43 years old male)
 - Test set subjects: 3, 4  (24 years old male, 46 years old female)
 
-The modeling for the speaker-indepenent system is straight-forward: we train the neural networks on the train set, validate them on the 
+The modeling for the speaker-independent system is straight-forward: we train the neural networks on the train set, validate them on the 
 validation set, and test them on the test set.
 
   
