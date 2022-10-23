@@ -53,7 +53,7 @@ Thus, for each 10 subjects, we got the following attributes stored as numpy arra
 - The featurename vector
 - The words corresponding to the spectrogram in each timestamp
 
-To understand the data better, in the <b>"Data_visualization.ipynb"<b> notebook we plotted some example audio files. Using short time Fourier-transformation we created spectrograms from the wave files and plotted them on a short interval, and from these we reconstructed the wave form to see if it matches the original data. On another spectrogram we also showed the words that were pronounced in the record.
+To understand the data better, in the <b>"Data_visualization.ipynb"</b> notebook we plotted some example audio files. Using short time Fourier-transformation we created spectrograms from the wave files and plotted them on a short interval, and from these we reconstructed the wave form to see if it matches the original data. On another spectrogram we also showed the words that were pronounced in the record.
 
 From now on, we will focus mainly on the first two attributes, that is, we want to reconstruct the spectrogram from the EEG feature vectors.
 For the one-speaker model, the main method of reconstruction is the following for each subject:
