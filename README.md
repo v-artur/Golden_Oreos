@@ -20,6 +20,7 @@ autoencoders, transformers and conventional neural network models, while we are 
 The notebooks and scripts require Python >= 3.6 and the following packages:
 - numpy (1.21.6)
 - scipy (1.7.3)
+- matplotlib (3.2.2)
 - scikit-learn (1.0.2)
 - pandas (1.3.5)
 - pywnb (2.2.0)
@@ -52,7 +53,9 @@ Thus, for each 10 subjects, we got the following attributes stored as numpy arra
 - The featurename vector
 - The words corresponding to the spectrogram in each timestamp
 
-From this, we are focusing mainly on the first two, that is, we want to reconstruct the spectrogram from the EEG feature vectors.
+To understand the data better, in the <b>"Data_visualization.ipynb"<b> notebook we plotted some example audio files. Using short time Fourier-transformation we created spectrograms from the wave files and plotted them on a short interval, and from these we reconstructed the wave form to see if it matches the original data. On another spectrogram we also showed the words that were pronounced in the record.
+
+From now on, we will focus mainly on the first two attributes, that is, we want to reconstruct the spectrogram from the EEG feature vectors.
 For the one-speaker model, the main method of reconstruction is the following for each subject:
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
