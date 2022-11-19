@@ -13,7 +13,7 @@ Our main objective is to reconstruct the spectral features of speech from intrac
 This project is heavily reliant on the research conducted by Maxime Verwoert
 et al. for which the article can be found <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>here</a> and
 the dataset that we use can be obtained from <a href="https://osf.io/download/g6q5m/" rel='nofollow'>here</a> (after downloading it, unzip it). We are aiming to replace the linear regression model described in the research with 
-autoencoders, transformers and conventional neural network models, while we are also trying to make a speaker-independent system.
+recurrent and fully connected dense neural network models while we are also trying to implement a speaker-independent system.
 
 The notebooks and scripts require Python >= 3.6 and the following packages:
 - numpy (1.21.6)
