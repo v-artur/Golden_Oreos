@@ -37,14 +37,14 @@ command line. The only requirement is that the directory which contains the scri
 (named "SingleWordProductionDutch-iBIDS") of the dataset.
 
 
-The notebook <b>"Modeling.ipynb"</b> will be used for the spectrogram reconstruction, and is mainly based on the "reconstruction_minimal.py" script 
-that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be imported from Google Drive during the modeling.
+The notebook <b>"Modeling2.ipynb"</b> will be used for the spectrogram reconstruction, and is partially based on the "reconstruction_minimal.py" script 
+that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be downloaded from Google Drive during the modeling.
 
 The <b>"Important urls"</b> directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
 
 <h2> Data Preparation and Modeling </h2>
 
-We obtained the desired feature and label vectors by running the "extract_features.py" script (The files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
+The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams stc.) described in detail in the article mentioned above. From the <i>.nwb</i> files which contains the iEEG, Audio and Stimulus we obtained the desired feature and label vectors by running the "extract_features.py" script (The resulted files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
 - The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
