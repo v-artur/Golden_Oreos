@@ -8,11 +8,11 @@
 - Vlaszov Artúr (XKMPWF)
 
 <b>Project</b>:
-Our main objective is to reconstruct the spectral features of speech from intracranial EEG data. (BRAIN2SPEECH)<br>
+Our main objective is to reconstruct the spectral features of speech from intracranial iEEG data. (BRAIN2SPEECH)<br>
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
 et al. for which the article can be found <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>here</a> and
-the dataset that we use can be obtained from <a href="https://osf.io/download/g6q5m/" rel='nofollow'>here</a> (after downloading it, unzip it). We are aiming to replace the linear regression model described in the research with 
+the dataset that we use can be obtained from <a href="https://osf.io/download/g6q5m/" rel='nofollow'>here</a> (after downloading it, unzip it). We are aiming to replace the linear regression model described in the paper with 
 recurrent and fully connected dense neural network models while we are also trying to implement a speaker-independent system.
 
 The notebooks and scripts require Python >= 3.6 and the following packages:
@@ -49,7 +49,7 @@ Thus, for each 10 subjects, we got the following attributes stored as numpy arra
 - The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
 - The featurename vector
-- The words corresponding to the spectrogram in each timestamp
+- The words corresponding to the spectrogram in each timestep
 
 To understand the data better, in the <b>"Data_visualization.ipynb"</b> notebook we plotted some example audio files. Using short time Fourier-transformation we created spectrograms from the wave files and plotted them on a short interval, and from these we reconstructed the wave form to see if it matches the original data. On another spectrogram we also showed the words that were pronounced in the record.
 
