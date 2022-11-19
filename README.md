@@ -12,8 +12,7 @@ Our main objective is to reconstruct the spectral features of speech from intrac
 
 This project is heavily reliant on the research conducted by Maxime Verwoert
 et al. for which the article can be found <a href="https://www.nature.com/articles/s41597-022-01542-9" rel='nofollow'>here</a> and
-the dataset that we use can be obtained from <a href="https://osf.io/download/g6q5m/" rel='nofollow'>here</a> (after downloading it, unzip it). We are aiming to replace the linear regression model described in the paper with 
-recurrent and fully connected dense neural network models while we are also trying to implement a speaker-independent system.
+the dataset that we use can be obtained from <a href="https://osf.io/download/g6q5m/" rel='nofollow'>here</a> (after downloading it, unzip it). We are aiming to replace the linear regression model described in the paper with recurrent and fully connected dense neural network models while we are also trying to implement a speaker-independent system.
 
 The notebooks and scripts require Python >= 3.6 and the following packages:
 - numpy (1.21.6)
@@ -57,9 +56,8 @@ From now on, we will focus mainly on the first two attributes, that is, we want 
 For the one-speaker model, the main method of reconstruction is the following for each subject:
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
-- We do <i>k</i> iterations. In each iteration, we label one of the parts as a test set (a different, never previously used part in each iteration)
-and a portion of the train set as validation set. Then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
-and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
+- We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
+a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the features as train set. We then train the models on the training set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
