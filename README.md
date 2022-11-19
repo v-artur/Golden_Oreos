@@ -44,7 +44,7 @@ The <b>"Important urls"</b> directory contains one Word documentum named "URLS.d
 
 <h2> Data Preparation and Modeling </h2>
 
-The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams stc.) described in detail in the article mentioned above. From the <i>.nwb</i> files which contains the iEEG, Audio and Stimulus we obtained the desired feature and label vectors by running the "extract_features.py" script (The resulted files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
+The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams etc.) described in detail in the article mentioned above. From the <i>.nwb</i> files which contain the iEEG, Audio and Stimulus raw data streams we obtained the desired feature and label vectors by running the "extract_features.py" script (The resulted files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
 - The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
