@@ -57,8 +57,8 @@ From now on, we will focus mainly on the first two attributes, that is, we want 
 For the one-speaker model, the main method of reconstruction is the following for each subject:
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
-- We do <i>k</i> iterations. In each iteration, we label one of the parts as a test set (a different, never previously used part in each iteration),
-and another part as a validation set, then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
+- We do <i>k</i> iterations. In each iteration, we label one of the parts as a test set (a different, never previously used part in each iteration)
+and a portion of the train set as validation set. Then we train the neural networks on the other <i>k-2</i> parts, validate them on the validation set,
 and finally, we reconstruct that part of the spectrogram which corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
