@@ -22,6 +22,11 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - pandas (1.3.5)
 - pywnb (2.2.0)
 - tensorflow (2.9.2)
+- fastdtw (0.3.4)
+- librosa (0.8.1) 
+- pyworld (0.3.2) 
+- pysptk (0.2.0) 
+- gdown (4.4.0)
 - (List will be updated as the project progresses)
 
 The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
