@@ -62,7 +62,7 @@ For the one-speaker model, the main method of reconstruction is the following fo
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
-a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the feature vectors as train set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
+a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the feature vectors as training set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
@@ -80,9 +80,9 @@ We experimented from two different angles: modeling for one speaker (which was t
 
 <b>One speaker model:</b>
 
-The "Modeling2.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one-speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
+The "Modeling2.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" part and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one-speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
 
-We tried out three different neural network models: a normal 3-layer FC-DNN and a 5-layer FC-DNN with a bottleneck layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a 200 dimensional space with PCA and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models. We also saved the average of the validation and the test losses across the iterations. 
+We tried out two different neural network models: a normal 3-layer FC-DNN and a 5-layer FC-DNN with a bottleneck layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a lower dimensional space with PCA (200 for the bottleneck model, 100 for the normal) and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models. We also saved the average validation and test losses across the iterations. 
 For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. The results are the following:
 
 <table>
@@ -114,9 +114,9 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
 </table>
 
 <b>Speaker-independent system:</b> <br>
-For the speaker-independent model, we first concatenated the data of participants 5-10 to be used as our training data, and similarly the data of participants 1-2 and 3-4 for the validation and test data respectively. We applied normalization and PCA on the feature vectors to get 300-dimensional data. The model we used is a simple fully-connected network with 5 layers using ADAM optimizer and MSE as loss function. The Pearson correlation of the result is approximately zero, we plan to improve it.
+For the speaker-independent model, we first concatenated the data of participants 5-10 to be used as our training data, and similarly the data of participants 1-2 and 3-4 for the validation and test data respectively. We applied normalization and PCA on the feature vectors to get 300 dimensional data. The model we used is a simple fully-connected network with 5 layers using ADAM optimizer and MSE as loss function. The Pearson correlation of the result is approximately zero, so we are planning on improving it.
 
 
 <b>Further plans/goals</b> <br>
-We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system.
+We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system in order to achieve better performance.
 
