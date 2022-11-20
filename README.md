@@ -41,7 +41,7 @@ command line. The only requirement is that the directory which contains the scri
 (named "SingleWordProductionDutch-iBIDS") of the dataset.
 
 
-The notebooks <b>"Modeling2.ipynb"</b>  and <b>"seq2seq.ipynb"</b> will be used for the spectrogram reconstruction, and is partially based on the "reconstruction_minimal.py" script 
+The notebooks <b>"Modeling2.ipynb"</b>  and <b>"speaker_indep.ipynb"</b> will be used for the spectrogram reconstruction, and is partially based on the "reconstruction_minimal.py" script 
 that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be downloaded from Google Drive during the modeling.
 
 The <b>"Important urls"</b> directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
