@@ -43,7 +43,7 @@ The <b>"Important urls"</b> directory contains one Word documentum named "URLS.d
 
 <h2> Data Preparation and Modeling </h2>
 
-The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams etc.) which are further described in detail in the article mentioned above. From the <i>.nwb</i> files which contain the iEEG, Audio and Stimulus raw data streams we obtained the desired feature and label vectors by running the "extract_features.py" script (The resulted files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
+The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams etc.) which are further described in detail in the article mentioned above. From the <i>_ieeg.nwb</i> files which contain the iEEG, Audio and Stimulus raw data streams we obtained the desired feature and label vectors by running the "extract_features.py" script (The resulted files can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
 - The spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
@@ -57,7 +57,7 @@ For the one-speaker model, the main method of reconstruction is the following fo
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
-a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the features as train set. We then train the models on the training set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
+a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the feature vectors as train set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
@@ -69,4 +69,55 @@ The distribution of the subject into sets were based on sex and age:
 The modeling for the speaker-independent system is straight-forward: we train the neural networks on the train set, validate them on the 
 validation set, and test them on the test set.
 
-  
+<h3> Early Results (2nd milestone) </h3>
+
+We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"seq2seq.ipynb"</b> notebook contains the results for the speaker independent system.
+
+<b>One speaker model:</b>
+
+The "Modeling2.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one-speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
+
+We tried out three different neural network models: a normal 3-layer FC-DNN, a 5-layer FC-DNN with bottleneck and a 2-layer LSTM model with 50 units on each layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a lower dimensional space with PCA (the dimension is 200 for the DNN models, and 50 for the LSTM model), and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models and 5 for the LSTM model. We also saved the average of the validation and the test losses across the iterations. 
+For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. The results are the following:
+
+<table>
+<thead>
+  <tr>
+    <th>Model </th>
+    <th>Validation loss</th>
+    <th>Test loss</th>
+    <th>Average Pearson cor.</th>
+    <th>MCD</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Bottleneck FC-DNN</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Normal FC-DNN</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>LSTM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+<b>Speaker-independent system:</b> <br> (Emese do this)
+
+
+<b>Further plans/goals</b> <br>
+We intend to fully optimize the one-speaker models + trying out the best preforming one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planing on trying out other speech synthesizer models (such as WaveGlow).
+
