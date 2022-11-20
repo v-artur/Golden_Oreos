@@ -41,7 +41,7 @@ command line. The only requirement is that the directory which contains the scri
 (named "SingleWordProductionDutch-iBIDS") of the dataset.
 
 
-The notebooks <b>"Modeling2.ipynb"</b>  and <b>"speaker_indep.ipynb"</b> will be used for the spectrogram reconstruction, and is partially based on the "reconstruction_minimal.py" script 
+The notebooks <b>"Modeling1.ipynb"</b>  and <b>"speaker_indep.ipynb"</b> will be used for the spectrogram reconstruction, and is partially based on the "reconstruction_minimal.py" script 
 that Maxime Verwoert et al. used. It also requires the "MelFilterBank.py" and "reconstructWave.py" scripts. The required data and scripts will be downloaded from Google Drive during the modeling.
 
 The <b>"Important urls"</b> directory contains one Word documentum named "URLS.docx", which lists the references we have checked so far.
@@ -78,11 +78,11 @@ validation set, and test them on the test set.
 
 (Quick disclaimer: When we finalized the results before the deadline, we did not have access to Google Colab's GPU, so we had to use CPU to run the notebooks. So when you run the notebook on GPU, you might get slightly different results from those shown below.)
 
-We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"speaker_indep.ipynb"</b> notebook contains the results for the speaker-independent system.
+We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling1.ipynb"</b> notebook while the <b>"speaker_indep.ipynb"</b> notebook contains the results for the speaker-independent system.
 
 <b>One speaker model:</b>
 
-The "Modeling2.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" part and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
+The "Modeling1.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" part and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
 
 We tried out two different neural network models: a normal 3-layer FC-DNN and a 5-layer FC-DNN with a bottleneck layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a lower dimensional space with PCA (200 for the bottleneck model, 100 for the normal) and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models.
 For evaluation, we used two metrics: <b>mean Pearson correlation</b> and <b>MCD</b>. The results are the following:
