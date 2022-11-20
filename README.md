@@ -100,16 +100,16 @@ For evaluation, we used two metrics: <b>mean Pearson correlation</b> and <b>MCD<
 <tbody>
   <tr>
     <td>Bottleneck FC-DNN</td>
-    <td>0.8836</td>
+    <td>0.8837</td>
     <td>2.4047</td>
     <td>0.5915</td>
     <td></td>
   </tr>
   <tr>
     <td>Normal FC-DNN</td>
-    <td>0.3889</td>
-    <td>2.336</td>
-    <td>0.610</td>
+    <td>0.3312</td>
+    <td>2.280</td>
+    <td>0.6227</td>
     <td></td>
   </tr>
 </tbody>
