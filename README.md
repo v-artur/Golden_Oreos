@@ -76,7 +76,7 @@ validation set, and test them on the test set.
 
 <h3> Early Results (2nd milestone) </h3>
 
-We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"seq2seq.ipynb"</b> notebook contains the results for the speaker independent system.
+We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"seq2seq.ipynb"</b> notebook contains the results for the speaker-independent system.
 
 <b>One speaker model:</b>
 
