@@ -108,9 +108,10 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
 </tbody>
 </table>
 
-<b>Speaker-independent system:</b> <br> (Emese do this)
+<b>Speaker-independent system:</b> <br>
+For the speaker-independent model, we first concatenated the data of participants 5-10 to be used as our training data, and similarly the data of participants 1-2 and 3-4 for the validation and test data respectively. We applied normalization and PCA on the feature vectors to get 300-dimensional data. The model we used is a simple fully-connected network with 5 layers using ADAM optimizer and MSE as loss function. The Pearson correlation of the result is approximately zero, we plan to improve it.
 
 
 <b>Further plans/goals</b> <br>
-We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccutent networks such as LSTM and GRU on the speaker-independent system.
+We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system.
 
