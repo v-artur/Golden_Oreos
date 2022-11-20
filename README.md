@@ -116,7 +116,7 @@ For evaluation, we used two metrics: <b>mean Pearson correlation</b> and <b>MCD<
 </table>
 
 <b>Speaker-independent system:</b> <br>
-For the speaker-independent model, we first concatenated the data of participants 5-10 to be used as our training data, and similarly the data of participants 1-2 and 3-4 for the validation and test data respectively. We applied normalization and PCA on the feature vectors to get 300 dimensional data. The model we used is a simple fully-connected network with 5 layers using ADAM optimizer and MSE as loss function. The Pearson correlation of the result is very lowo, we are planning on improving it. For participant 4, we also computed the MCD value, which was 5.4.
+For the speaker-independent model, we first concatenated the data of participants 5-10 to be used as our training data, and similarly the data of participants 1-2 and 3-4 for the validation and test data respectively. We applied normalization and PCA on the feature vectors to get 300 dimensional data. The model we used is a simple fully-connected network with 5 layers using ADAM optimizer and MSE as loss function. The Pearson correlation of the result is very lowo, we are planning on improving it. For participant 4, we also computed the MCD value, which was 5.349841.
 
 
 <b>Further plans/goals</b> <br>
