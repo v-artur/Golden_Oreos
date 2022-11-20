@@ -118,5 +118,5 @@ For the speaker-independent model, we first concatenated the data of participant
 
 
 <b>Further plans/goals</b> <br>
-We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system in order to achieve better performance. If we have time, we would like to try out other speech synthesizer models (such as WaveGlow) as well.
+We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system in order to achieve better performance. If we have time, we would like to try out other speech synthesizer models (such as WaveGlow) as well.
 
