@@ -77,7 +77,7 @@ We experimented from two different angles: modeling for one speaker (which was t
 
 The "Modeling2.ipynb" notebook is sectioned into 4 parts: the preparation part (where the different models and functions are defined), the "One Person Model" part, the "MCD score evaluation" and the "Trying out the best configuration for every subject" part. <b>IMPORTANT: You should run only the first three parts of the notebook to train and to get the results of the one-speaker models</b> (the "Trying out the best configuration for every subject" part is still experimental and takes about 2-3 hours to run). The first part downloads the datasets and scripts, imports the modules and defines the necessary functions. The second part called "One Person Model" is where the networks' training happens and some of the evaluation metrics are also calculated within this part. The "MCD score evaluation" is where we evaluate the MCD (Mel Cepstral Distortion) of the original and the synthsized audio files.
 
-We tried out three different neural network models: a normal 3-layer FC-DNN, a 5-layer FC-DNN with bottleneck and a 2-layer LSTM model with 50 units on each layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a lower dimensional space with PCA (the dimension is 200 for the DNN models, and 50 for the LSTM model), and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models and 5 for the LSTM model. We also saved the average of the validation and the test losses across the iterations. 
+We tried out three different neural network models: a normal 3-layer FC-DNN and a 5-layer FC-DNN with a bottleneck layer. We trained each model from scratch during each iteration of the reconstruction with ADAM optimizer and we used MSE as loss. To lower the computation time in the iterations, we standardized and transformed the original feature vectors into a 200 dimensional space with PCA and we only trained the models for 100 epochs. The number of iterations during the reconstruction were 10 for the DNN models. We also saved the average of the validation and the test losses across the iterations. 
 For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. The results are the following:
 
 <table>
@@ -86,27 +86,20 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
     <th>Model </th>
     <th>Validation loss</th>
     <th>Test loss</th>
-    <th>Average Pearson cor.</th>
+    <th>Mean Pearson correlation</th>
     <th>MCD</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Bottleneck FC-DNN</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.8304</td>
+    <td>2.395</td>
+    <td>0.5901</td>
     <td></td>
   </tr>
   <tr>
     <td>Normal FC-DNN</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>LSTM</td>
     <td></td>
     <td></td>
     <td></td>
@@ -119,5 +112,5 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
 
 
 <b>Further plans/goals</b> <br>
-We intend to fully optimize the one-speaker models + trying out the best preforming one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planing on trying out other speech synthesizer models (such as WaveGlow).
+We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 15-20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccutent networks such as LSTM and GRU on the speaker-independent system.
 
