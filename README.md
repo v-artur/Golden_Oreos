@@ -62,7 +62,7 @@ For the one-speaker model, the main method of reconstruction is the following fo
 - We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
 other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
-a portion of the remaining <i>k-2</i> parts as validation set, and the rest of the feature vectors as training set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
+a portion of the remaining <i>k-1</i> parts as validation set, and the rest of the feature vectors as training set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
 
 For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
