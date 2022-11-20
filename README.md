@@ -91,8 +91,6 @@ For evaluation, we used two metrics: <b>mean Pearson correlation</b> and <b>MCD<
 <thead>
   <tr>
     <th>Model </th>
-    <th>Validation loss</th>
-    <th>Test loss</th>
     <th>Mean Pearson correlation</th>
     <th>MCD</th>
   </tr>
