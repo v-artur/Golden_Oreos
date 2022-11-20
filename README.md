@@ -76,7 +76,9 @@ validation set, and test them on the test set.
 
 <h3> Early Results (2nd milestone) </h3>
 
-We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"seq2seq.ipynb"</b> notebook contains the results for the speaker-independent system.
+(Quick disclaimer: When we finalized the results before the deadline, we did not have access to Google Colab's GPU, so we had to use CPU to run the notebooks. So when you run the notebook on GPU, you might get slightly different results from those shown below)
+
+We experimented from two different angles: modeling for one speaker (which was the first subject in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling2.ipynb"</b> notebook while the <b>"speaker_indep.ipynb"</b> notebook contains the results for the speaker-independent system.
 
 <b>One speaker model:</b>
 
