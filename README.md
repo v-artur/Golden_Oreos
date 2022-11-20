@@ -76,7 +76,7 @@ validation set, and test them on the test set.
 
 <h3> Early Results (2nd milestone) </h3>
 
-(Quick disclaimer: When we finalized the results before the deadline, we did not have access to Google Colab's GPU, so we had to use CPU to run the notebooks. So when you run the notebook on GPU, you might get slightly different results from those shown below.)
+(Quick disclaimer: When we finalized the results before the deadline, we did not have access to Google Colab's GPU, so we had to use CPU to run the notebooks. So when you run the notebook on GPU, you might get slightly different results from those shown below. Another thing to note is that if you run the notebook from Google Drive, the notebook tends to put "ipynb.checkpoint" files into specific folders, which could mess up the MCD calculation functions, so we advise you to run the notebook using the "Open in Colab" button.)
 
 We experimented from two different angles: modeling for one speaker (which was the participant 1 in our case) and making a speaker-independent system. The modeling for one speaker can be found in the <b>"Modeling1.ipynb"</b> notebook while the <b>"speaker_indep.ipynb"</b> notebook contains the results for the speaker-independent system.
 
