@@ -98,9 +98,9 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
 <tbody>
   <tr>
     <td>Bottleneck FC-DNN</td>
-    <td>0.8304</td>
-    <td>2.395</td>
-    <td>0.5901</td>
+    <td>0.8836</td>
+    <td>2.4047</td>
+    <td>0.5915</td>
     <td></td>
   </tr>
   <tr>
