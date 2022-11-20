@@ -100,9 +100,9 @@ For evaluation, we used two metrics: <b>Pearson correlation</b> and <b>MCD</b>. 
   </tr>
   <tr>
     <td>Normal FC-DNN</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.3889</td>
+    <td>2.336</td>
+    <td>0.610</td>
     <td></td>
   </tr>
 </tbody>
