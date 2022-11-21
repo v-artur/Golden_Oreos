@@ -59,7 +59,7 @@ To understand the data better, in the <b>"Data_visualization.ipynb"</b> notebook
 
 From now on, we will focus mainly on the first two attributes, that is, we want to reconstruct the mel spectrogram from the EEG feature vectors.
 For the one-speaker model, the main method of reconstruction is the following for each subject:
-- We divide the set feature vectors and their corresponding labels into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with other options as well).
+- We divide the set of feature vectors and their corresponding labels into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
 a portion of the remaining <i>k-1</i> parts as validation set, and the rest of the feature vectors as training set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
 - After <i>k</i> iterations, we completely reconstructed the mel spectrogram, so we compare it to the original.
