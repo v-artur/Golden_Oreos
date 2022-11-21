@@ -50,7 +50,7 @@ The <b>"Important urls"</b> directory contains one Word documentum named "URLS.d
 
 The dataset contains various information about the 10 test subjects (gender, age) and their recordings (coordinates of the implanted electrodes, raw data streams etc.) which are further described in detail in the article mentioned above. From the <i>_ieeg.nwb</i> files which contain the iEEG, Audio and Stimulus raw data streams we obtained the desired feature and label vectors by running the "extract_features.py" script (We uploaded the resulted files onto Google Drive and can be viewed <a href="https://drive.google.com/drive/folders/1pdc95RPUk-Zh0J8kaYo8cXz_ickSOwcB?usp=sharing">here</a> along with the original audiofiles). 
 Thus, for each 10 subjects, we got the following attributes stored as numpy arrays:
-- The spectrogram of the original audio (this is what we aim to reconstruct)
+- The mel spectrogram of the original audio (this is what we aim to reconstruct)
 - The features transformed from the EEG data
 - The featurename vector
 - The words corresponding to the spectrogram in each timestep
@@ -59,11 +59,10 @@ To understand the data better, in the <b>"Data_visualization.ipynb"</b> notebook
 
 From now on, we will focus mainly on the first two attributes, that is, we want to reconstruct the spectrogram from the EEG feature vectors.
 For the one-speaker model, the main method of reconstruction is the following for each subject:
-- We divide the set of feature vectors into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with 
-other options as well).
+- We divide the set feature vectors and their corresponding labels into <i>k</i> equal parts (where the initial value for <i>k</i> is 10, but we would like to experiment with other options as well).
 - We do <i>k</i> iterations. In each iteration, we label one of the parts as test set (a different, never previously used part in each iteration),
 a portion of the remaining <i>k-1</i> parts as validation set, and the rest of the feature vectors as training set. We then train the models on the train set, validate them on the validation set, and finally reconstruct the part of the spectrogram that corresponds to the test set.
-- After <i>k</i> iterations, we completely reconstructed the spectrogram, so we compare it to the original.
+- After <i>k</i> iterations, we completely reconstructed the mel spectrogram, compare it to the original.
 
 For the speaker-independent model, we chose 6 individuals to serve as train set, 2 other as validation set and the remaining 2 as test set. 
 The distribution of the subject into sets were based on sex and age:
