@@ -29,7 +29,7 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - gdown (4.4.0)
 - (List will be updated as the project progresses)
 
-<b>Important note</b>: To load in the required biga datasets, we mainly use the 'gdown' library to download the data from our Google Drive. However, sometimes Google denies every type of access to the files (however big they are). According to our experiences, this can occur randomly even if we don't try to access the data for days. If that were to happen, the download links to the files will be shown on the screen, so you can still obtain them.
+<b>Important note</b>: To load in the required big datasets, we mainly use the 'gdown' library to download the data from our Google Drive. However, sometimes Google denies every type of access to the files (however big they are). According to our experiences, this can occur randomly even if we don't try to access the data for days. If that were to happen, the download links to the files will be shown on the screen, so you can still obtain them.
 
 The scripts used for data preparation and preprocessing are the same that Maxime Verwoert et al. 
 <a href="https://github.com/neuralinterfacinglab/SingleWordProductionDutch">used</a> with minor to no changes. 
