@@ -119,6 +119,15 @@ We intend to fully optimize the one-speaker models + trying out the best perform
 
 <h2> Results (final milestone) </h2>
 
+Since the second milestone, the Modeling1 notebook was quite heavily modified. The last section ("Trying out the best configuration for every subject") was removed. A new type of model (BiGRU) was added. The amount of reconstruction iterations was decreased to 5 folds for all models. The DNN models now both use a 200 dimensional input.
+
+The BiGRU model has two biderectional GRU layers, after which we use a Flatten layer before passing the data on the dense output layer. The input is different for this model, it is two dimensional, and an array reshaping function is being used to feed the data into the input.
+
+This way the sections of the notebook are: 1.) Preparation (importing dependencies, loading data, defining functions), 2.) One person baseline models (and their evaluation), 3.) Hyperparameter optimization for the models (and an evaluation).
+
+The hyperparameter optimization is done with keras-tuner. The models are redefined with parameter sets for the tuner to choose from. In each iteration of the reconstruction the tuner searches the optimal hyperparameters and trains a separate model. This way the spectrogram is being reconstructed in 5 parts.
+
+
 TODO: Artúr about the one speaker model
 
 TODO: Emese about 
