@@ -75,7 +75,7 @@ The distribution of the subject into sets were based on sex and age:
 The modeling for the speaker-independent system is straight-forward: we train the neural networks on the train set, validate them on the 
 validation set, and test them on the test set.
 
-<h3> Early Results (2nd milestone) </h3>
+<h2> Early Results (2nd milestone) </h2>
 
 (Quick disclaimer: When we finalized the results before the deadline, we did not have access to Google Colab's GPU, so we had to use CPU to run the notebooks. So when you run the notebook on GPU, you might get slightly different results from those shown below. Another thing to note is that if you run the notebook from Google Drive, the notebook tends to put "ipynb.checkpoint" files into specific folders, which could mess up the MCD calculation functions, so we advise you to run the notebook using the "Open in Colab" button.)
 
@@ -116,4 +116,10 @@ You need to run the whole "speaker_indep.ipynb" notebook to train the model and 
 
 <b>Further plans/goals</b> <br>
 We intend to fully optimize the one-speaker models + trying out the best performing one on the other subjects. But as of now, the training of one model takes around 20 minutes, so we would like to lower the training time as well. We are also planning on implementing reccurent networks such as LSTM and GRU on the speaker-independent system in order to achieve better performance. If we have time, we would like to try out other speech synthesizer models (such as WaveGlow) as well.
+
+<h2> Results (final milestone) </h2>
+
+TODO: Artúr about the one speaker model
+
+TODO: Emese about 
 
