@@ -190,7 +190,7 @@ The results of the speaker-independent system:
 <tbody>
   <tr>
     <td>Normal FC-DNN</td>
-    <td> 1.4877 </td>
+    <td> 1.4876 </td>
     <td> 0.7329 </td>
     <td> 1.2362 </td>
   </tr>
