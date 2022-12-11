@@ -28,7 +28,7 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - librosa (0.8.1) 
 - pyworld (0.3.2) 
 - pysptk (0.2.0) 
-- keras_tuner (1.1.3)
+- keras-tuner (1.1.3)
 - (List will be updated as the project progresses)
 
 <b>Important note</b>: To load in the required big datasets, we mainly use the 'gdown' library to download the data from our Google Drive. However, sometimes Google denies every type of access to the files (however big they are). According to our experiences, this can occur randomly even if we don't try to access the data for days. If that were to happen, the download links to the files will be shown on the screen, so you can still obtain them.
