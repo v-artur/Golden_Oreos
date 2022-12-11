@@ -163,9 +163,9 @@ The results of the one-person models:
   </tr>
   <tr>
     <td>Normal FC-DNN</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.5895 </td>
+    <td> 0.5661 </td>
+    <td> 7.8219 </td>
   </tr>
   <tr>
     <td>BiGRU</td>
