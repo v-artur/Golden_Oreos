@@ -143,13 +143,15 @@ The hyperparameter optimization for the speaker-independent models was also carr
 
 <b>Results:</b><br>
 
+The results of the one-person models:
+
 <table>
 <thead>
   <tr>
     <th>Model </th>
+    <th>RMSE</th>
     <th>Mean Pearson correlation</th>
     <th>MCD</th>
-    <th>RMSE</th>
   </tr>
 </thead>
 <tbody>
@@ -174,3 +176,35 @@ The hyperparameter optimization for the speaker-independent models was also carr
 </tbody>
 </table>
 
+The results of the speaker-independent system:
+
+<table>
+<thead>
+  <tr>
+    <th>Model </th>
+    <th>RMSE</th>
+    <th>Mean Pearson correlation</th>
+    <th>MCD</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Normal FC-DNN</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>BiGRU</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Convolutional network</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+</tbody>
+</table>
