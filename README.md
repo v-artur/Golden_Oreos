@@ -143,5 +143,34 @@ The hyperparameter optimization for the speaker-independent models was also carr
 
 <b>Results:</b><br>
 
-
+<table>
+<thead>
+  <tr>
+    <th>Model </th>
+    <th>Mean Pearson correlation</th>
+    <th>MCD</th>
+    <th>RMSE</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Bottleneck FC-DNN</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Normal FC-DNN</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>BiGRU</td>
+    <td> - </td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+</tbody>
+</table>
 
