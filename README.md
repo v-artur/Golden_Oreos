@@ -190,21 +190,21 @@ The results of the speaker-independent system:
 <tbody>
   <tr>
     <td>Normal FC-DNN</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.4877 </td>
+    <td> 0.7329 </td>
+    <td> 1.2362 </td>
   </tr>
   <tr>
     <td>BiGRU</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.4536 </td>
+    <td> 0.7356 </td>
+    <td> 1.3598 </td>
   </tr>
   <tr>
     <td>Convolutional network</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.4737 </td>
+    <td> 0.7273 </td>
+    <td> 1.6827 </td>
   </tr>
 </tbody>
 </table>
