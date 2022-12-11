@@ -209,4 +209,6 @@ The results of the speaker-independent system:
 </tbody>
 </table>
 
-The folder named <b>"Documentation"</b> contains the documentation of the project as well as it's source file, style file and the used images.
+<b>Documentation:</b><br>
+
+The folder named "Documentation" contains the documentation of the project as well as it's source file, style file and the used images.
