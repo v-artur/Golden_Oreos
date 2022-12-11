@@ -139,7 +139,7 @@ The hyperparameter optimization for the one speaker model was done with keras-tu
 
 The methodology for the speaker-independent system has been revised. Our new plan was to transform every feature vector into a larger dimensional vector which contains all the different electrode names across all the subjects. In the original features, every feature vector consisted of 9 smaller feature vectors which corresponded to the transformed iEEG signals across 9 consecutive timesteps, so every feature vector had some sort of sequentiality within itself. Then we branched into two modeling types, one of them being keeping the higher dimensionality and utilize the sequential nature of the vectors with BiGRU and Conv networks, and the other being reducing the dimensionality for easier and faster computation. Modeling for the first method is in the "speaker_indep_bigru_conv.ipynb" notebook while the "speaker_indep.ipynb" notebook contains the lower dimensional modeling.
 
-The hyperparameter optimization for the speaker-independent models was also carried out with keras-tuner in a similar manner. But since the amount of training data was vastly larger than in the one speaker model, we had to limit the number of maximum training epochs and hyperparameter options in order for the optimalizations to finish within a reasonable amount of time. 
+The hyperparameter optimization for the speaker-independent models was also carried out with keras-tuner in a similar manner. But since the amount of training data was vastly larger than in the one speaker model, we had to limit the number of maximum training epochs and hyperparameter options in order for the optimization to finish within a reasonable amount of time. 
 
 <b>Results:</b><br>
 
