@@ -169,9 +169,9 @@ The results of the one-person models:
   </tr>
   <tr>
     <td>BiGRU</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.6071 </td>
+    <td> 0.5627 </td>
+    <td> 4.3637 </td>
   </tr>
 </tbody>
 </table>
