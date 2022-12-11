@@ -157,9 +157,9 @@ The results of the one-person models:
 <tbody>
   <tr>
     <td>Bottleneck FC-DNN</td>
-    <td> - </td>
-    <td> - </td>
-    <td> - </td>
+    <td> 1.5783 </td>
+    <td> 0.5670 </td>
+    <td> 4.7027 </td>
   </tr>
   <tr>
     <td>Normal FC-DNN</td>
