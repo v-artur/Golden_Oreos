@@ -7,6 +7,8 @@
 - Vastag Emese (OTNB7G)
 - Vlaszov Artúr (XKMPWF)
 
+<b>IMPORTANT:</b> In order for you to access our files stored in Google Drive, you need to visit the following link and make a shortcut for the folder: https://drive.google.com/drive/folders/1Qfr8TNZSlrhpKgYx0LrTxve9ljIFwqRq?usp=sharing (more details in the notebooks and at the end of the README)
+
 <b>Project</b>:
 Our main objective is to reconstruct the spectral features of speech from intracranial EEG data. (BRAIN2SPEECH)<br>
 
@@ -119,16 +121,26 @@ We intend to fully optimize the one-speaker models + trying out the best perform
 
 <h2> Results (final milestone) </h2>
 
-Since the second milestone, the Modeling1 notebook was quite heavily modified. The last section ("Trying out the best configuration for every subject") was removed. A new type of model (BiGRU) was added. The amount of reconstruction iterations was decreased to 5 folds for all models. The DNN models now both use a 200 dimensional input.
+Since the last milestone, many methods which we used to download our data from drive (gdown, wget etc.) eventually denied our requests to download our data. So in order for you to access our files stored in Google Drive, you need to visit the following link: https://drive.google.com/drive/folders/1Qfr8TNZSlrhpKgYx0LrTxve9ljIFwqRq?usp=sharing
 
-The BiGRU model has two biderectional GRU layers, after which we use a Flatten layer before passing the data on the dense output layer. The input is different for this model, it is two dimensional, and an array reshaping function is being used to feed the data into the input.
+Next, click on the "DeepLearning" folder just beneath the search bar, then select "Add shortcut to Drive", then select "My Drive" and create a shortcut. After that, you should be able to see our folder and the files within when you are mounting your drive. The paths to the files in the code should work as inteded, but we can't cross out the possibility that you might need to change some filepaths (it worked for us and we also tested it with our other 3rd party accounts). If you have any questions or something does not work, please contact us. (this paragraph is also written in many of our Jupyter notebooks)
 
-This way the sections of the notebook are: 1.) Preparation (importing dependencies, loading data, defining functions), 2.) One person baseline models (and their evaluation), 3.) Hyperparameter optimization for the models (and an evaluation).
+We 
 
-The hyperparameter optimization is done with keras-tuner. The models are redefined with parameter sets for the tuner to choose from. In each iteration of the reconstruction the tuner searches the optimal hyperparameters and trains a separate model. This way the spectrogram is being reconstructed in 5 parts.
+The Modeling1 notebook was quite heavily modified. The last section ("Trying out the best configuration for every subject") was removed. A new type of model (BiGRU) was added. The amount of reconstruction iterations was decreased to 5 folds for all models. The DNN models now both use a 200 dimensional input. The BiGRU model has two biderectional GRU layers, after which we use a Flatten layer before passing the data on the dense output layer. The input is different for this model, it is two dimensional, and an array reshaping function is being used to feed the data into the input. This way the sections of the notebook are: 1.) Preparation (importing dependencies, loading data, defining functions), 2.) One person baseline models (and their evaluation), 3.) Hyperparameter optimization for the models (and an evaluation).
+
+The hyperparameter optimization for all models was done with keras-tuner. The models are redefined with parameter sets for the tuner to choose from. In each iteration of the reconstruction the tuner searches the optimal hyperparameters and trains a separate model. This way the spectrogram is being reconstructed in 5 parts.
+
+Several other Jupyter notebooks were added or modified to match our intentions. 
+- The <b>"speaker_indep_dim_reduction.ipynb"</b> notebook was created for transforming the higher dimensional data for the speaker-independent model into lower dimensional data. Because of the dimensionality and the amount of the original data, if you are planning to run it, <b>you need to use Colab Pro with additional RAM</b> otherwise the notebook will run out of memory
+- The <b>"speaker_indep_bigru_conv.ipynb"</b> is for training and evaluating the higher dimensional data on the BiGRU and Convolution based models for the speaker-independent system. Just like the previous notebook, <b>you need to use Colab Pro with additional memory</b> in order to run it.
+- The <b>"speaker_indep.ipynb"</b> is being used for the lower dimensional data for the speaker-independent system. This can be run without additional RAM resources.
+
+The hyperparameter optimization for the speaker-independent models was also carried out with keras-tuner in a similar manner. But since the amount of training data was vastly larger than in the one speaker model, we had to limit the number of maximum training epochs and hyperparameter options in order for the optimalizations to finish within a reasonable amount of time. 
 
 
-TODO: Artúr about the one speaker model
+
+
 
 TODO: Emese about 
 
