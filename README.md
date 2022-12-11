@@ -28,7 +28,7 @@ The notebooks and scripts require Python >= 3.6 and the following packages:
 - librosa (0.8.1) 
 - pyworld (0.3.2) 
 - pysptk (0.2.0) 
-- gdown (4.4.0)
+- keras_tuner (1.1.3)
 - (List will be updated as the project progresses)
 
 <b>Important note</b>: To load in the required big datasets, we mainly use the 'gdown' library to download the data from our Google Drive. However, sometimes Google denies every type of access to the files (however big they are). According to our experiences, this can occur randomly even if we don't try to access the data for days. If that were to happen, the download links to the files will be shown on the screen, so you can still obtain them.
@@ -137,13 +137,11 @@ Please note that even though we set the seeds in both Tensorflow, Numpy and duri
 The <b>Modeling1.ipynb</b> notebook was quite heavily modified. The last section ("Trying out the best configuration for every subject") was removed. A new type of model (BiGRU) was added, and the amount of reconstruction iterations was decreased to 5 folds for all models. The DNN models now both use a 200 dimensional input. The BiGRU model has two biderectional GRU layers, after which we use a Flatten layer before passing the data on the dense output layer. The input is different for this model, it is two dimensional, and an array reshaping function is being used to feed the data into the input. This way the sections of the notebook are: 1.) Preparation (importing dependencies, loading data, defining functions), 2.) One person baseline models (and their evaluation), 3.) Hyperparameter optimization for the models (and an evaluation).
 The hyperparameter optimization for the one speaker model was done with keras-tuner. The models are redefined with parameter sets for the tuner to choose from. In each iteration of the reconstruction the tuner searches the optimal hyperparameters and trains a separate model. This way the spectrogram is being reconstructed in 5 parts.
 
+The methodology for the speaker-independent system has been revised. Our plan was to transform every feature vector into a larger dimensional vector which contains all the different electrode names across all the subjects. In the original features, every feature vector consisted of 9 smaller feature vectors which corresponded to the transformed iEEG signals across 9 consecutive timesteps, so every feature vector had some sort of sequentiality within itself. Then we branched into two modeling tpyes, one of them being keeping the higher dimensionality and utilize the sequential nature of the vectors with BiGRU and Conv networks, and the other being reducing the dimensionality for easier and faster computation. Modeling for the first method is in the "speaker_indep_bigru_conv.ipynb" notebook while the "speaker_indep.ipynb" notebook contains the lower dimensional modeling.
+
 The hyperparameter optimization for the speaker-independent models was also carried out with keras-tuner in a similar manner. But since the amount of training data was vastly larger than in the one speaker model, we had to limit the number of maximum training epochs and hyperparameter options in order for the optimalizations to finish within a reasonable amount of time. 
 
 <b>Results:</b><br>
 
 
-
-
-
-TODO: Emese about 
 
