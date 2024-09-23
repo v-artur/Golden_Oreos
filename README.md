@@ -7,7 +7,7 @@
 - Vastag Emese (OTNB7G)
 - Vlaszov Artúr (XKMPWF)
 
-<b>IMPORTANT:</b> In order for you to access our files stored in Google Drive, you need to visit the following link and make a shortcut for the folder: https://drive.google.com/drive/folders/1Qfr8TNZSlrhpKgYx0LrTxve9ljIFwqRq?usp=sharing (more details in the notebooks and at the end of the README)
+<b>IMPORTANT:</b> In order for you to access our files stored in Google Drive, you need to visit the following link and make a shortcut for the folder: https://drive.google.com/drive/folders/1Qfr8TNZSlrhpKgYx0LrTxve9ljIFwqRq?usp=sharing (more details in the notebooks and at the end of the README) IMPORTANT! The link is outdated, please contact one of the contributors for more info!
 
 <b>Project</b>:
 Our main objective is to reconstruct the spectral features of speech from intracranial EEG data. (BRAIN2SPEECH)<br>
